@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduManage — School Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">E</span><span>EduManage</span></div>
+      <div class="school-switcher"><span class="school-icon">🏫</span><span>Greenfield Academy<br><small>Academic year 2024/25</small></span><span>⌄</span></div>
+      <nav>
+        <p class="nav-label">MAIN MENU</p>
+        <button class="nav-item active" data-view="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-item" data-view="students"><span>♙</span> Students</button>
+        <button class="nav-item" data-view="teachers"><span>♧</span> Teachers</button>
+        <button class="nav-item" data-view="attendance"><span>◷</span> Attendance</button>
+        <button class="nav-item" data-view="classes"><span>▤</span> Classes & Subjects</button>
+        <button class="nav-item" data-view="fees"><span>◈</span> Fees & Payments</button>
+        <p class="nav-label">MANAGEMENT</p>
+        <button class="nav-item" data-view="calendar"><span>□</span> Calendar</button>
+        <button class="nav-item" data-view="reports"><span>⌁</span> Reports</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span> Settings</button>
+      </nav>
+      <div class="sidebar-help"><span>💡</span><div><strong>Need help?</strong><small>Check the admin guide</small></div><button>→</button></div>
+      <div class="user-mini"><div class="avatar purple">AS</div><div><strong>Alex Sharma</strong><small>Administrator</small></div><span>⋮</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">E</span> EduManage</div>
+        <div class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search anything..." /><kbd>⌘ K</kbd></div>
+        <div class="top-actions"><button class="icon-btn" aria-label="Notifications">♢<i></i></button><div class="avatar purple">AS</div><span class="top-name">Alex Sharma</span><span>⌄</span></div>
+      </header>
+
+      <section id="dashboardView" class="view">
+        <div class="page-heading"><div><p class="eyebrow">TUESDAY, SEPTEMBER 10, 2024</p><h1>Good morning, Alex <span>✦</span></h1><p class="muted">Here's what's happening at Greenfield Academy today.</p></div><button class="primary-btn" id="addStudentBtn">＋ Add student</button></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon blue">♙</span><span class="trend up">↗ 8.2%</span></div><p>Total students</p><h2>1,248</h2><small>vs. 1,153 last year</small><div class="spark blue-spark"></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon green">◷</span><span class="trend up">↗ 2.4%</span></div><p>Attendance today</p><h2>94.8%</h2><small>1,183 present today</small><div class="spark green-spark"></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon orange">▤</span><span class="trend neutral">— 0.8%</span></div><p>Active classes</p><h2>42</h2><small>Across 6 grade levels</small><div class="spark orange-spark"></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon violet">◈</span><span class="trend up">↗ 12.6%</span></div><p>Fees collected</p><h2>$48,290</h2><small>82% of monthly target</small><div class="spark violet-spark"></div></article>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel attendance-panel"><div class="panel-heading"><div><h3>Attendance overview</h3><p class="muted">Daily attendance rate across the school</p></div><select><option>This week</option><option>This month</option></select></div><div class="chart-wrap"><div class="y-labels"><span>100%</span><span>95%</span><span>90%</span><span>85%</span><span>80%</span></div><div class="chart"><div class="grid-lines"></div><svg viewBox="0 0 650 210" preserveAspectRatio="none"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#6255e8" stop-opacity=".25"/><stop offset="1" stop-color="#6255e8" stop-opacity="0"/></linearGradient></defs><path d="M0 105 C35 92 50 115 87 95 S130 74 165 90 S205 132 250 105 S290 71 330 85 S370 126 415 95 S450 65 495 74 S545 107 575 80 S625 65 650 48 L650 210 L0 210Z" fill="url(#area)"/><path d="M0 105 C35 92 50 115 87 95 S130 74 165 90 S205 132 250 105 S290 71 330 85 S370 126 415 95 S450 65 495 74 S545 107 575 80 S625 65 650 48" fill="none" stroke="#6255e8" stroke-width="3"/></svg><div class="x-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div></div></div></article>
+          <article class="panel"><div class="panel-heading"><div><h3>Upcoming events</h3><p class="muted">Don't miss what's next</p></div><button class="link-btn" data-view="calendar">View calendar →</button></div><div class="event-list"><div class="event"><div class="date-block"><b>12</b><span>SEP</span></div><div><strong>Parent–Teacher Meeting</strong><small>Thursday · 10:00 AM – 3:00 PM</small></div><span class="event-dot purple-dot"></span></div><div class="event"><div class="date-block"><b>16</b><span>SEP</span></div><div><strong>Mid-term examinations</strong><small>Monday · All day</small></div><span class="event-dot orange-dot"></span></div><div class="event"><div class="date-block"><b>20</b><span>SEP</span></div><div><strong>Science fair 2024</strong><small>Friday · 9:00 AM – 1:00 PM</small></div><span class="event-dot green-dot"></span></div></div></article>
+        </div>
+        <div class="dashboard-grid lower-grid">
+          <article class="panel"><div class="panel-heading"><div><h3>Recent students</h3><p class="muted">Latest students added to the system</p></div><button class="link-btn" data-view="students">View all →</button></div><div class="table-wrap"><table><thead><tr><th>Student</th><th>Grade</th><th>Status</th><th>Joined</th></tr></thead><tbody id="studentTable"></tbody></table></div></article>
+          <article class="panel quick-panel"><div class="panel-heading"><div><h3>Quick actions</h3><p class="muted">Common tasks, right at your fingertips</p></div></div><div class="quick-actions"><button id="quickStudent"><span class="quick-icon blue">♙</span><div><strong>Add a student</strong><small>Register a new student</small></div><b>→</b></button><button><span class="quick-icon green">◷</span><div><strong>Mark attendance</strong><small>Record today's attendance</small></div><b>→</b></button><button><span class="quick-icon orange">◈</span><div><strong>Record a payment</strong><small>Update fee payments</small></div><b>→</b></button></div></article>
+        </div>
+      </section>
+      <section id="genericView" class="view hidden"><div class="page-heading"><div><p class="eyebrow">EDUMANAGE</p><h1 id="genericTitle">Students</h1><p class="muted">Manage your school's information from one place.</p></div><button class="primary-btn" id="genericAction">＋ Add new</button></div><div class="panel empty-state"><div class="empty-icon">✦</div><h2 id="genericHeading">Students workspace</h2><p>This section is ready for your records. Use the dashboard to monitor activity and add new data.</p><button class="secondary-btn" data-view="dashboard">← Back to dashboard</button></div></section>
+    </main>
+  </div>
+  <div id="modal" class="modal hidden"><div class="modal-card"><button class="close-btn" id="closeModal">×</button><p class="eyebrow">NEW RECORD</p><h2>Add a student</h2><p class="muted">Enter the student's basic information.</p><form id="studentForm"><label>Full name<input required id="studentName" placeholder="e.g. Maya Johnson"></label><label>Grade<select id="studentGrade"><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option></select></label><div class="form-actions"><button type="button" class="secondary-btn" id="cancelModal">Cancel</button><button class="primary-btn">Save student</button></div></form></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
