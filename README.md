@@ -59,11 +59,13 @@ Before real deployment, add a secure backend/database, role-based access, a serv
 
 The public demo is hosted on **https://vten-team.github.io/School-magment/**.
 
-GitHub Pages serves the static app directly from the root of branch
-`arena/197cc719-school-magment`. The HTML uses relative asset paths, so it works
+GitHub Pages serves the static app directly from the root of the `main` branch.
+Changes are developed on `arena/197cc719-school-magment` and deployed by merging
+a pull request into `main`. The HTML uses relative asset paths, so it works
 under the repository subdirectory as well as locally. `.nojekyll` disables
 unnecessary Jekyll processing. The browser modules do not require a build step
-or a backend. To update this deployment, test changes and push this same branch.
+or a backend. To update this deployment, test changes, push the working branch,
+and merge its pull request into `main`.
 `npm run build` also produces a portable, bundled version in `dist/` for other
 static hosts.
 
